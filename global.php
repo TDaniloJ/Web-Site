@@ -10,14 +10,9 @@ $db = "clientes";
 
 $conn = new mysqli($host, $user, $pass, $db);
 
-$query = mysqli_query($conn, "SELECT * FROM clientes");
-
-if($resultado = mysqli_fetch_assoc($query)) {
-    
-}
 
 if ($conn -> connect_errno) {
-    die ("Erro ao conectar no Mysqli" . $conn -> connect_error);
+    die ("Erro ao conectar no Mysqli: " . $conn -> connect_error);
 }
 
 //Chama Funções
